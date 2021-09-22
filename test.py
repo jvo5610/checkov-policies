@@ -6,10 +6,10 @@ class variables(BaseResourceCheck):
         name = "Ensure all data stored in the RDS is securely encrypted at rest"
         id = "CKV_AWS_16"
         supported_resources = ['variable']
-        categories = [CheckCategories.ENCRYPTION]
+        categories = [CheckCategories.GENERAL_SECURITY]
         super().__init__(name=name, id=id, categories=categories, supported_resources=supported_resources)
 
-def scan_resource_conf(self, conf):
+def scan_resource_conf(self, conf, entity_type):
     """
         Looks for encryption configuration at aws_db_instance:
         https://www.terraform.io/docs/providers/aws/d/db_instance.html
