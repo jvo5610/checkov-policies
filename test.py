@@ -16,8 +16,9 @@ def scan_resource_conf(self, conf):
     :param conf: aws_db_instance configuration
     :return: <CheckResult>
     """
-    if 'type' in conf.keys()
+    if 'type' in conf.keys():
       return CheckResult.PASSED
+
     return CheckResult.FAILED
 
 check = variables()
