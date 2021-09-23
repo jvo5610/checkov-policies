@@ -4,6 +4,6 @@ metadata:
   category: "GENERAL_SECURITY"
 definition:
   cond_type: "attribute"
-  resource_types: "all"
+  resource_types: "aws_s3_bucket"
   attribute: "tags"
   operator: "exists"
